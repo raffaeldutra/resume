@@ -1,0 +1,170 @@
+% 4ALL
+\def\experienceFourAll{
+  {%
+    \IfLanguageName{portuguese}%
+    {Infraestrutura como código com Terrafom para ambientes AWS}
+    {Infrastructure as code using Terraform for AWS environments}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Implementação e administração de clusters Kubernetes (EKS)}
+    {Kubernetes clusters (EKS) management and new implementations}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {ArgoCD, Istio, External DNS e External Secrets para Kubernetes}
+    {ArgoCD, Istio, External DNS and External Secrets for Kubernetes}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Comunicação ativa com times de desenvolvimento para novos projetos}
+    {Active communication with development times for new projects}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Automações para Operações em Plataforma em nível de Pipelines desenvolvidas em Shell Script e Python}
+    {Automations for Operations in our platform using Piplines coded in Shell Script and Python}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Observabilidade de sistemas e infraestrutura, como Prometheus, Grafana e Cloudwatch}
+    {Systems and infrastructure observability, such as Prometheus, Grafana and Cloudwatch}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Docker e Docker Compose para ambientes de desenvolvimento e infraestrutura}
+    {Docker and Docker Compose for development and infrastructure environments}
+ }
+}
+
+% Poatek
+\def\experiencePoatek{
+  {%
+    \IfLanguageName{portuguese}%
+    {Continuous Integration e Continuous Delivery/Deployment com CodeCommit e CodePipeline}
+    {Continuous Integration and Continuous Delivery/Deployment using CodeCommit and CodePipeline}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Infraestrutura como código com CloudFormation}
+    {Infrastructure as code using CloudFormation}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Python scripts com Boto3 para serviços AWS}
+    {Python scripts using Boto3 for AWS services}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Deploy e automação de infraestrutura (Docker, Docker Compose, Bash e Ansible)}
+    {Deploy and infrastructure automation (Docker, Docker Compose, Bash e Ansible)}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Logs e métricas de monitoramento utilizando serviços da AWS}
+    {Logs and monitoring metrics using AWS services}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Automação para ambientes de desenvolvimento, como Vagrant, Packer e Terraform}
+    {Development environment automation, such as Vagrant, Packer and Terraform}
+  }
+}
+
+% Sicredi
+\def\experienceSicredi{
+  {%
+    \IfLanguageName{portuguese}%
+    {Planejamento, automação e implementação de infraestrutura com Packer, Terraform, Ansible para ambientes AWS}
+    {Planning, automation and implementation of infrastructure using Packer, Terraform and Ansible for AWS environments}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Continuous Integration e Continuous Delivery/Deployment com Gitlab para ambientes on-premises e cloud}
+    {Continuous Integration and Continuous Delivery/Deployment using Gitlab for on-premises and cloud environments}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Ambientes Blue/Green para ambientes AWS}
+    {Blue/Green environments for AWS}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Hashicorp Hashicorp Consul Vault}
+    {Hashicorp Hashicorp Consul Vault}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Coleta de métricas com Spring Boot para Hashicorp Consul}
+    {Metrics for Hashicorp Consul using Spring Boot}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Ansible Roles para automação de cluster multi-master para Kubernetes}
+    {Ansible Roles to automate multi-master Kubernetes cluster}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {TDD (Test-driven development) para Roles Ansible}
+    {TDD (Test-driven development) for Roles Ansible}
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {Python scripts com Boto3 para serviços AWS}
+    {Python script using Boto3 for AWS services}
+  }
+}
+
+
+\section{
+  \IfLanguageName{portuguese}%
+  {Experiência}
+  {Experience}
+  }
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {4ALL}{\cityPortoAlegre}
+      {DevOps Engineer}%
+        {%
+          \IfLanguageName{portuguese}%
+          {Fev 2022 \textbf{--} Jun 2023}
+          {Feb 2022 \textbf{--} Jun 2023}
+        }
+
+        \resumeItemListStart
+
+          \foreach \x in \experienceFourAll
+          {
+            \resumeItem{\x}
+          }
+
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Poatek}{\cityPortoAlegre}
+      {DevOps Engineer}{Jan 2021 \textbf{--} Jan 2022}
+        \resumeItemListStart
+
+          \foreach \x in \experiencePoatek
+          {
+            \resumeItem{\x}
+          }
+
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Sicredi}{\cityPortoAlegre}
+      {DevOps Engineer}{Ago 2019 \textbf{--} Jan 2021}
+        \resumeItemListStart
+
+          \foreach \x in \experienceSicredi
+          {
+            \resumeItem{\x}
+          }
+
+        \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
