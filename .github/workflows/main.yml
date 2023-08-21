@@ -1,0 +1,45 @@
+name: main
+
+on:
+  push:
+    branches:
+      - main
+      - issue#?[0-9]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Cache registry
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ hashFiles('**/Dockerfile') }}
+
+      - name: Build
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./Dockerfile
+          tags: pdflatex:latest
+          outputs: type=docker,dest=/tmp/pdflatex.tar
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Generate
+        run: |
+          docker load --input /tmp/pdflatex.tar
+
+          docker image ls
+
+          docker container run \
+          --workdir /tmp \
+          --volume ./:/tmp \
+          pdflatex \
+          pdflatex main.tex
