@@ -10,3 +10,8 @@ pdf:
 	--volume ./:/tmp \
 	raffaeldutra/pdflatex:1.0 pdflatex \
 	main.tex
+
+.PHONY: build
+build:
+	docker image build \
+	--tag raffaeldutra/pdflatex:1.0 .
