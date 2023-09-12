@@ -75,38 +75,81 @@
 \def\experienceSicredi{
   {%
     \IfLanguageName{portuguese}%
-    {Planejamento, automação e implementação de infraestrutura com Packer, Terraform, Ansible para ambientes AWS}
-    {Planning, automation and implementation of infrastructure using Packer, Terraform and Ansible for AWS environments}
+    {%
+      Planejamento, automação e implementação de infraestrutura em ambiente AWS.
+      \newline
+      Projetos internos dos mais variados utilizando como stack Packer, Terraform e Ansible.
+    }
+    {%
+      Planning, automation and implementation of infrastructure for AWS environments.
+      \newline
+      Some internal projects using as stack tools like Packer, Terraform and Ansible.
+    }
   },
   {%
     \IfLanguageName{portuguese}%
-    {Continuous Integration e Continuous Delivery/Deployment com Gitlab para ambientes on-premises e cloud}
-    {Continuous Integration and Continuous Delivery/Deployment using Gitlab for on-premises and cloud environments}
+    {%
+      Continuous Integration e Continuous Delivery/Deployment com Gitlab.
+      \newline
+      Utilizado para ambientes on-premises e provedores de nuvem públicas.
+    }
+    {%
+      Continuous Integration and Continuous Delivery/Deployment using Gitlab.
+      \newline
+      Used for on-premises and public cloud providers.
+    }
   },
   {%
     \IfLanguageName{portuguese}%
-    {Ambientes Blue/Green para ambientes AWS}
-    {Blue/Green environments for AWS}
+    {%
+      Ambientes Blue/Green para ambientes AWS.
+      \newline
+      Projeto realizado utilizando instâncias EC2 com controle de peso via DNS para redirecionar tráfego entre os dois ambientes para novos deployments.
+    }
+    {%
+      Blue/Green AWS environments.
+      \newline
+      Project created using EC2 instances with weight controle via DNS for redirect traffic between both environments for new deployments.
+    }
   },
   {%
     \IfLanguageName{portuguese}%
-    {Coleta de métricas com Spring Boot para Hashicorp Consul}
-    {Metrics for Hashicorp Consul using Spring Boot}
+    {%
+      Coleta de métricas com Spring Boot para Hashicorp Consul.
+      \newline
+      Projeto desenvolvido usando SprintBoot para coletar métricas de Hashicorp Consul e enviá-las para o Telegraf e serem visualizadas no Grafana.
+    }
+    {%
+      Metrics for Hashicorp Consul using Spring Boot.
+      \newline
+      Project developed using SpringBoot to collect metrics from Consul and send it to Telegraf and visualized in Grafana.
+    }
   },
   {%
     \IfLanguageName{portuguese}%
-    {Ansible Roles para automação de cluster multi-master para Kubernetes}
-    {Ansible Roles to automate multi-master Kubernetes cluster}
+    {%
+      Ansible Roles para automação de cluster multi-master para Kubernetes.
+      \newline
+      Projeto para automação de cluster multi-master e adição das máquinas workers on-premise com Ansible. Todas as roles eram testadas utilizando o projeto Testinfra.
+    }
+    {%
+      Ansible Roles to automate multi-master Kubernetes cluster.
+      \newline
+      Project for cluster multi-master automation and workers machines add on-premise with Ansible. All Ansible roles were tested using Testinfra project.
+    }
   },
   {%
     \IfLanguageName{portuguese}%
-    {TDD (Test-driven development) para Roles Ansible}
-    {TDD (Test-driven development) for Roles Ansible}
-  },
-  {%
-    \IfLanguageName{portuguese}%
-    {Python scripts com Boto3 para serviços AWS}
-    {Python script using Boto3 for AWS services}
+    {%
+      Python scripts com Boto3 para serviços AWS.
+      \newline
+      Alguns projetos necessitavam de desenvolvimento diretamente com consumo de API da AWS.
+    }
+    {%
+      Python script using Boto3 for AWS services.
+      \newline
+      Some projects had to be developed directly using AWS API.
+    }
   }
 }
 
