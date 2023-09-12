@@ -71,33 +71,51 @@
 \def\experiencePoatek{
   {%
     \IfLanguageName{portuguese}%
-    {Continuous Integration e Continuous Delivery/Deployment com CodeCommit e CodePipeline}
-    {Continuous Integration and Continuous Delivery/Deployment using CodeCommit and CodePipeline}
+    {%
+      Desenvolvimento completo na AWS com Continuous Integration e Continuous Delivery/Deployment com CodeCommit, CodeBuild, CodePipeline, Cloudwatch, XRay, Lambda Functions e CloudFormation.
+      \newline
+      Projeto desenvolvido para um novo Banco Colombiano onde todo o projeto foi realizado com Lambdas, sendo orquestrado pelo serviço Step Functions da AWS e totalmente monitorado pela stack de serviços do Cloudwatch.
+      \newline
+      Toda infraestrutura necessária, como por exemplo S3, CodePipeline e etc, foram provisionadas utilizando CloudFormation.
+    }
+    {%
+      Continuous Integration and Continuous Delivery/Deployment using CodeCommit, CodeBuild, CodePipeline, Cloudwatch, XRay, Lambda Functions and CloudFormation.
+      \newline
+      Project developed for a new Colombian Bank Institution. All project was created using Step Functions to orchestrate Lambda Functions and being monitored using Cloudwatch services.
+      \newline
+      All infrastructure needed, such as S3, CodePipeline and etc, was provisioned using CloudFormation.
+    }
   },
   {%
     \IfLanguageName{portuguese}%
-    {Infraestrutura como código com CloudFormation}
-    {Infrastructure as code using CloudFormation}
+    {%
+      Python scripts com Boto3 para serviços AWS.
+      \newline
+      Alguns projetos necessitavam de desenvolvimento pontuais utilizando Boto3 para consumo dos serviços de API da AWS.
+    }
+    {%
+      Python scripts using Boto3 for AWS services.
+      \newline
+      Some projects had specific development for AWS API.
+    }
   },
   {%
     \IfLanguageName{portuguese}%
-    {Python scripts com Boto3 para serviços AWS}
-    {Python scripts using Boto3 for AWS services}
-  },
-  {%
-    \IfLanguageName{portuguese}%
-    {Deploy e automação de infraestrutura (Docker, Docker Compose, Bash e Ansible)}
-    {Deploy and infrastructure automation (Docker, Docker Compose, Bash e Ansible)}
-  },
-  {%
-    \IfLanguageName{portuguese}%
-    {Logs e métricas de monitoramento utilizando serviços da AWS}
-    {Logs and monitoring metrics using AWS services}
-  },
-  {%
-    \IfLanguageName{portuguese}%
-    {Automação para ambientes de desenvolvimento, como Vagrant, Packer e Terraform}
-    {Development environment automation, such as Vagrant, Packer and Terraform}
+    {%
+      Reestruturação de novos ambientes para sistemas legados utilizando Vagrant, Packer, Ansible e Terraform.
+      \newline
+      Projeto para sistemas legados onde necessitavam de atualização mais frequentemente no fluxo de deployment e garantia do softwares ao rodar nos diferentes ambientes, como DEV e QA.
+      \newline
+      Para os times de desenvolvimento foram criados ambientes em Docker, Docker Compose e Shell Scripts para automações de Infraestrutura.
+    }
+    {%
+      Development environment automation, such as Vagrant, Packer, Ansible, and Terraform.
+      \newline
+      Project for legacy systems. Those environments had to be updated more frequently and with guarantee to be deployed in different environments, such as DEV and QA.
+      \newline
+      For the development teams, environments were created using Docker, Docker Compose and Shell Scripts for Infrastructure automation.
+      \newline
+    }
   }
 }
 
