@@ -10,7 +10,7 @@ pdf:
 	--volume ./:/tmp \
 	raffaeldutra/pdflatex:1.0 pdflatex \
 	-output-directory=/tmp \
-	-jobname=rafael_dutra \
+	-jobname=rafael_dutra.pdf \
 	main.tex
 
 .PHONY: build
