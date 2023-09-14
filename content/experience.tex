@@ -290,6 +290,46 @@
   }
 }
 
+% AGCO
+\def\experienceAgco{
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Administração de servidores on-premises com Puppet.
+    }
+    {%
+      On-premises servers administration with Puppet.
+    }
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Logs e métricas de monitoramento Elasticsearch, Logstash, Grafana, Telegraf e InfluxDB.
+    }
+    {%
+      Logs, metrics and monitoring with Elasticsearch, Logstash, Grafana Telegraf and InfluxDB.
+    }
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Automação para ambientes de desenvolvimento com Vagrant, Packer, Linux, Preseed.
+    }
+    {%
+      Automation for development environments with Vagrant, Packer, Linux, Preseed.
+    }
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Continuous Integration e Continuous Delivery/Deployment com Bamboo.
+    }
+    {%
+      Continuous Integration and Continuous Delivery/Deployment com Bamboo.
+    }
+  }
+}
+
 \section{
   \IfLanguageName{portuguese}%
   {Experiência}
@@ -373,6 +413,23 @@
         \resumeItemListStart
 
           \foreach \x in \experienceJive
+          {
+            \resumeItem{\x}
+          }
+
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {AGCO}{\cityCanoas}
+      {DevOps Engineer}%
+        {%
+          \IfLanguageName{portuguese}%
+          {Out 2016 \textbf{--} Jan 2018}
+          {Oct 2016 \textbf{--} Jan 2018}
+        }
+        \resumeItemListStart
+
+          \foreach \x in \experienceAgco
           {
             \resumeItem{\x}
           }
