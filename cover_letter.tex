@@ -1,0 +1,90 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=5mm,
+    top=20mm,
+}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[portuguese,english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\usepackage{tikz,listofitems}
+\usepackage{import}
+\input{glyphtounicode}
+\usepackage[T1]{fontenc}
+\usepackage{pgffor} % foreach loops
+\usepackage{iflang} % multilanguage
+
+% FONT OPTIONS
+%
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro}
+
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+\import{./}{variables}
+\import{./}{commands.tex}
+
+
+\begin{document}
+\selectlanguage{english}
+\setlength{\parskip}{10px}
+
+\import{./sections}{header.tex}
+
+Dear \desiredCompany{},
+
+I am writing to express my strong interest in the \desiredPosition{} position at \desiredCompany{}. With a proven track record of implementing DevOps practices and optimizing infrastructure for efficiency and reliability, I am excited about the opportunity to contribute to your team.
+
+\par
+In my current role as a \currentPosition{} at \currentCompany{}, I have had the privilege of working on diverse projects that involve automating deployment pipelines, ensuring system stability, and enhancing the overall development process. Some of my key accomplishments include:
+
+% Add content for the letter
+\import{./cover_letter}{devops.tex}
+
+\par
+I am deeply passionate about DevOps principles and continually seek opportunities to enhance my skills and stay current with industry best practices. My ability to bridge the gap between development and operations teams, coupled with my dedication to delivering high-quality, efficient solutions, positions me as a valuable asset to \desiredCompany{}.
+
+\par
+Enclosed is my resume, which provides further details on my qualifications and experience. I would welcome the opportunity to discuss how my skills and background align with \desiredCompany's goals during an interview. Please feel free to contact me at \personalEmail{} to schedule a conversation.
+
+\par
+Thank you for considering my application. I look forward to the possibility of joining the \desiredCompany{} team and contributing to its continued success.
+
+\par
+Sincerely,
+
+\par
+Rafael Dutra.
+
+
+\end{document}
