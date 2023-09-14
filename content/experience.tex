@@ -241,6 +241,55 @@
   }
 }
 
+% Jive
+\def\experienceJive{
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Infraestrutura como código com Terraform.
+    }
+    {%
+      Infrastructure as code using Terraform.
+    }
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Rundeck para configuração e agendamento de serviços para usuários.
+    }
+    {%
+      Rundeck to create configuration and services to automate tasks for specific users.
+    }
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Continous Integration com Bitbucket e Jenkins.
+    }
+    {%
+      Continuous Integration with Bitbucket and Jenkins.
+    }
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Logs e métricas com Datadog e Flapjack.
+    }
+    {%
+      Logs and metrics with Datadog and Flapjack.
+    }
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Documentar processos e ferramentas que eram desenvolvidas internamente para os clientes na AWS.
+    }
+    {%
+      Documentation for internal processes and tools developd internally for AWS clients.
+    }
+  }
+}
+
 \section{
   \IfLanguageName{portuguese}%
   {Experiência}
@@ -307,6 +356,23 @@
         \resumeItemListStart
 
           \foreach \x in \experienceStefanini
+          {
+            \resumeItem{\x}
+          }
+
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Jive Softwares}{\cityPortland}
+      {DevOps Engineer}%
+        {%
+          \IfLanguageName{portuguese}%
+          {Jan 2018 \textbf{--} Jan 2018}
+          {Jan 2018 \textbf{--} Jul 2018}
+        }
+        \resumeItemListStart
+
+          \foreach \x in \experienceJive
           {
             \resumeItem{\x}
           }
