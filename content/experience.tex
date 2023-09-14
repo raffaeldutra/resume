@@ -201,6 +201,45 @@
   }
 }
 
+% Stefanini
+\def\experienceStefanini{
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Infraestrutura como código com Terraform e Cloudformation.
+    }
+    {%
+      Infrastructure as code using Terraform and CloudFormation.
+    }
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Continuous Integration e Continuous Delivery/Deployment com Gitlab, CodeCommit, CodeBuild e CodePipeline.
+    }
+    {%
+      Continuous Integration and Continuous Delivery/Deployment using Gitlab, CodeCommit, CodeBuild and CodePipeline.
+    }
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Administração de servidores on-premises com Puppet.
+    }
+    {%
+      On-premises servers administration with Puppet.
+    }
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Empacotamento de Softwares com Packer, Ansible e Gitlab para publicação de novas AMIs na AWS para projetos rodando em modo Blue/Green na AWS.
+    }
+    {%
+      Packer, Ansible and Gitlab to create AMIs images to be published in projects with Blue/Green environments.
+    }
+  }
+}
 
 \section{
   \IfLanguageName{portuguese}%
@@ -257,5 +296,21 @@
 
         \resumeItemListEnd
 
+    \resumeSubheading
+      {Stefanini}{\cityPortoAlegre}
+      {DevOps Engineer}%
+        {%
+          \IfLanguageName{portuguese}%
+          {Ago 2018 \textbf{--} Mai 2019}
+          {Aug 2018 \textbf{--} May 2019}
+        }
+        \resumeItemListStart
+
+          \foreach \x in \experienceStefanini
+          {
+            \resumeItem{\x}
+          }
+
+        \resumeItemListEnd
 
   \resumeSubHeadingListEnd
