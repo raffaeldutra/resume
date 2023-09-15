@@ -1,3 +1,9 @@
+% Create a custom language to be passed on CLI argument
+\newcommand{\xselectlanguage}[1]{%
+  \begingroup\edef\x{\endgroup
+    \noexpand\selectlanguage{#1}}\x
+}
+
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
