@@ -4,7 +4,35 @@ Welcome to my resume. This project was created using Latex (pdflatex) to generat
 
 Below the instructions to create the Docker image and run it.
 
-## Creating image
+## TL;DR
+
+To create pdf file to generate resume:
+
+First, create the image:
+
+```
+make build
+```
+
+Create the resume with:
+
+```
+make pdf
+```
+
+If you want to create Cover Letter, use `make cl`, but it needs arguments/parameters to be used:
+
+```
+make cl \
+currentCompany="Current Company Name" \
+currentPosition="Current Position" \
+desiredCompany="Target Company" \
+desiredPosition="Target Position"
+```
+
+Running `make` will show the output for available commands.
+
+## Creating image manually
 
 First, we do need generate a new image for pdflatex, and after that, we can run it.
 
@@ -15,12 +43,17 @@ docker image build \
 
 ## Running our container
 
-All files will be generated and shared with the local host.
+All files will be generated and shared within your localhost.
 
 ```bash
 docker container run \
 --workdir /tmp \
---volume ./:/tmp raffaeldutra/pdflatex:1.0 pdflatex \
+--volume ./:/tmp \
+raffaeldutra/pdflatex:1.0 pdflatex \
+-output-directory=/tmp \
+-jobname=cv \ # output file created
+"\def\lang{$(lang)} \
+\input{main}" \
 main.tex
 ```
 
