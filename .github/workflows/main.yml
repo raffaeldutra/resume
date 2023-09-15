@@ -38,8 +38,15 @@ jobs:
 
           docker image ls
 
+          lang="english"
+
           docker container run \
           --workdir /tmp \
           --volume ./:/tmp \
           pdflatex \
-          pdflatex main.tex
+          pdflatex \
+          -output-directory=/tmp \
+          -jobname=rafael_dutra_${lang} \
+          "\def\lang{${lang}} \
+          \input{main}" \
+          main.tex
