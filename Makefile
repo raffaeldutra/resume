@@ -3,6 +3,9 @@ CFLAGS=-s
 current_dir := $(shell pwd)
 SHELL := /bin/bash
 
+# Specify default language to be used to create the pdf file.
+# In you want to change the default language, you can pass a different value through CLI.
+lang ?= english
 .PHONY: pdf
 pdf:
 	docker container run \
@@ -11,6 +14,8 @@ pdf:
 	raffaeldutra/pdflatex:1.0 pdflatex \
 	-output-directory=/tmp \
 	-jobname=rafael_dutra \
+	"\def\lang{$(lang)} \
+	\input{main}" \
 	main.tex
 
 .PHONY: cl
