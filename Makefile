@@ -31,7 +31,20 @@ help:
 	awk 'BEGIN {FS = ":.*?## "}; {printf "\033[$(HELP_COMMAND_COLOR)%-$(SPACES)s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: pdf
-pdf:
+pdf: ## Create resume file
+	@echo "usage: make pdf [ARGS]"
+	@echo
+	@echo "args:"
+	@echo
+	@echo "lang: Language to create pdf (default: english)"
+	@echo
+	@echo
+
+ifeq ($(lang),)
+	@echo "You need to pass the argument: lang"
+	@exit 1
+endif
+
 	docker container run \
 	--workdir /tmp \
 	--volume ./:/tmp \
