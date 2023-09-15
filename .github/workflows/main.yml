@@ -23,6 +23,7 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ hashFiles('**/Dockerfile') }}
 
       - name: Build
+        id: build
         uses: docker/build-push-action@v4
         with:
           context: .
@@ -33,6 +34,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Generate
+        if: steps.build.outputs.exit_code == 0
         run: |
           docker load --input /tmp/pdflatex.tar
 
@@ -52,6 +54,7 @@ jobs:
           main.tex
 
       - name: Cover Letter
+        if: steps.build.outputs.exit_code == 0
         run: |
           docker load --input /tmp/pdflatex.tar
 
