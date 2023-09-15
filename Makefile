@@ -44,6 +44,37 @@ pdf:
 
 .PHONY: cl
 cl: ## Create Cover Letter with a little help of variables that can be passed via CLI.
+	@echo "usage: make cl [ARGS]"
+	@echo
+	@echo "args:"
+	@echo
+	@echo "currentCompany:     Current company that you are working on"
+	@echo "currentPosition:    Current position that you are working on"
+	@echo "desiredCompany:     Company name that you want to work"
+	@echo "desiredPosition:    Position name that you want to work"
+	@echo
+	@echo
+
+ifeq ($(currentCompany),)
+	@echo "You need to pass the argument: currentCompany"
+	@exit 1
+endif
+
+ifeq ($(currentPosition),)
+	@echo "You need to pass the argument: currentPosition"
+	@exit 1
+endif
+
+ifeq ($(desiredCompany),)
+	@echo "You need to pass the argument: desiredCompany"
+	@exit 1
+endif
+
+ifeq ($(desiredPosition),)
+	@echo "You need to pass the argument: desiredPosition"
+	@exit 1
+endif
+
 	docker container run \
 	--workdir /tmp \
 	--volume ./:/tmp \
