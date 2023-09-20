@@ -3,11 +3,23 @@
 \def\personalWebsite{https://rafaeldutra.me}
 
 % Cities
-\def\cityPortoAlegre{Porto Alegre/RS, Brazil}
-\def\cityFlorianopolis{Florianópolis/SC, Brazil}
-\def\citySaoLeopoldo{São Leopoldo/SC, Brazil}
-\def\cityPortland{Portland/OR, United States}
-\def\cityCanoas{Canoas/RS, Brazil}
+\def\countryBrazil{%
+  \IfLanguageName{portuguese}%
+  {Brasil}
+  {Brazil}
+}
+
+\def\countryUnitedStates{%
+  \IfLanguageName{portuguese}%
+  {Estados Unidos}
+  {United States}
+}
+
+\def\cityPortoAlegre{Porto Alegre/RS, \countryBrazil}
+\def\cityFlorianopolis{Florianópolis/SC, \countryBrazil}
+\def\citySaoLeopoldo{São Leopoldo/SC, \countryBrazil}
+\def\cityPortland{Portland/OR, \countryUnitedStates}
+\def\cityCanoas{Canoas/RS, \countryBrazil}
 
 % Education
 \def\educationCtai{Faculdade de Tecnologia SENAI/CTAI}
