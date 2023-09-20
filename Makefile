@@ -12,6 +12,13 @@ SPACES ?= 10
 # In you want to change the default language, you can pass a different value through CLI.
 lang ?= english
 
+# Define output language to be written in the pdf file.
+langOutput="en"
+
+ifeq ($(lang),portuguese)
+langOutput="ptbr"
+endif
+
 # Color values
 RED := 31m
 GREEN := 32m
@@ -50,7 +57,7 @@ endif
 	--volume ./:/tmp \
 	raffaeldutra/pdflatex:1.0 pdflatex \
 	-output-directory=/tmp \
-	-jobname=rafael_dutra \
+	-jobname=rafael_dutra_$(langOutput) \
 	"\def\lang{$(lang)} \
 	\input{main}" \
 	main.tex
@@ -93,7 +100,7 @@ endif
 	--volume ./:/tmp \
 	raffaeldutra/pdflatex:1.0 pdflatex \
 	-output-directory=/tmp \
-	-jobname=rafael_dutra_cover_letter \
+	-jobname=rafael_dutra_cover_letter_$(langOutput) \
 	"\def\currentCompany{$(currentCompany)} \
 	 \def\currentPosition{$(currentPosition)} \
 	 \def\desiredPosition{$(desiredPosition)} \
