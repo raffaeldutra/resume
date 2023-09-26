@@ -15,6 +15,8 @@ lang ?= english
 # Define output language to be written in the pdf file.
 langOutput="en"
 
+cj ?= current
+
 ifeq ($(lang),portuguese)
 langOutput="ptbr"
 endif
@@ -59,6 +61,7 @@ endif
 	-output-directory=/tmp \
 	-jobname=rafael_dutra_$(langOutput) \
 	"\def\lang{$(lang)} \
+	\def\cj{$(cj)} \
 	\input{main}" \
 	main.tex
 

@@ -47,6 +47,7 @@ All files will be generated and shared within your localhost.
 
 ```bash
 export lang="english" # You can change it to portuguese if needed
+export cj=true        # Set this parameter to tell if you're currently working.
 
 docker container run \
 --workdir /tmp \
@@ -55,6 +56,7 @@ raffaeldutra/pdflatex:1.0 pdflatex \
 -output-directory=/tmp \
 -jobname=cv \ # output file created
 "\def\lang{${lang}} \
+\def\cj{${cj}} \
 \input{main}" \
 main.tex
 ```
