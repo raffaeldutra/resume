@@ -50,6 +50,7 @@ jobs:
           -output-directory=/tmp \
           -jobname=rafael_dutra_${lang} \
           "\def\lang{${lang}} \
+          \def\cj{$(cj)} \
           \input{main}" \
           main.tex
 
