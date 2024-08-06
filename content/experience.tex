@@ -1,3 +1,46 @@
+% Liber Capital
+\def\experienceLiberCapital{
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Infraestrutura como código utilizando Terraform.
+      \newline
+      Diversos projetos criados com Terrafom para ambientes AWS.
+    }
+    {%
+      Infrastructure as code using Terraform.
+      \newline
+      Many projects created using Terraform for AWS environments.
+    }
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Docker e Docker Compose para ambientes de desenvolvimento para infraestrutura.
+      \newline
+      Desenvolvimento de ferramenta totalmente em Shell Script para aceleramos o \href{https://github.com/raffaeldutra/cid}{desenvolvimento da Infraestrutura e disponibilizado como Open Source que pode ser encontrado em https://github.com/raffaeldutra/cid}.
+    }
+    {%
+      Docker and Docker Compose for development and infrastructure environments.
+      \newline
+      Development of a tool totaly written in Shell Script to speed up our \href{https://github.com/raffaeldutra/cid}{infrastructure development and released as Open Source. The project can be found at https://github.com/raffaeldutra/cid}.
+    }
+  },
+  {%
+    \IfLanguageName{portuguese}%
+    {%
+      Ansible para gerência de configuração.
+      \newline
+      Projetos internos dos mais diversos para automação usando Ansible juntamente com Azure DevOps.
+    }
+    {%
+      Configuration Management using Ansible.
+      \newline
+      Multiple internal projecs automated using Ansible with Azure DevOps.
+    }
+  }
+}
+
 % 4ALL
 \def\experienceFourAll{
   {%
@@ -338,13 +381,32 @@
   \vspace{3pt}
   \resumeSubHeadingListStart
 
+    % Liber Capital
+    \resumeSubheading
+      {Liber Capital}{\cityPortoAlegre}
+      {DevOps Engineer}%
+        {%
+          \IfLanguageName{portuguese}%
+          {Dez 2023 \textbf{--} \cj}
+          {Dec 2023 \textbf{--} \cj}
+        }
+
+        \resumeItemListStart
+
+          \foreach \x in \experienceLiberCapital
+          {
+            \resumeItem{\x}
+          }
+
+        \resumeItemListEnd
+
     \resumeSubheading
       {4ALL}{\cityPortoAlegre}
       {DevOps Engineer}%
         {%
           \IfLanguageName{portuguese}%
-          {Fev 2022 \textbf{--} \cj}
-          {Feb 2022 \textbf{--} \cj}
+          {Fev 2022 \textbf{--} Jul 2023}
+          {Feb 2022 \textbf{--} Jul 2023}
         }
 
         \resumeItemListStart
