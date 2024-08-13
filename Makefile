@@ -8,9 +8,6 @@ SHELL := /bin/bash
 # To change on CLI at runtime, use: make SPACES=20
 SPACES ?= 20
 
-# If cj is not passed, then use the current value.
-cj ?= current
-
 # Output file name
 fileName := rafael_dutra
 
@@ -62,7 +59,6 @@ ifeq ($(lang),all)
 		-output-directory=/tmp/ \
 		-jobname=$(fileName)_$$lang \
 		"\def\lang{$$lang} \
-		\def\cj{$(cj)} \
 		\input{main}" \
 		main.tex; \
 	done
@@ -74,7 +70,6 @@ else
 	-output-directory=/tmp \
 	-jobname=$(fileName)_{$(lang)} \
 	"\def\lang{$(lang)} \
-	\def\cj{$(cj)} \
 	\input{main}" \
 	main.tex
 endif
